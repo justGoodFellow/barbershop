@@ -3,14 +3,15 @@ html(lang='ru')
   head
     meta(charset='utf-8')
     title
-      | Test
+      | Borodinski
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(http-equiv='x-ua-compatible', content='ie=edge')
     link(rel='stylesheet', href='css/style.min.css')
   body
     include header.pug
 
-    block content
+    main
+      block content
 
     include footer.pug
     script(src='js/concatenated.js')
