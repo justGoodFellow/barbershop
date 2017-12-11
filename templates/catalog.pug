@@ -1,0 +1,133 @@
+extend ./layouts/base.pug
+
+block content
+  section.catalog
+    .catalog__wrapper
+      nav.page-nav
+        h2.page-nav__title
+          | Средства для ухода
+        ul.page-nav__list
+          li.page-nav__item
+            a.page-nav__link(href='index.html')
+              | Главная
+          li.page-nav__item
+            a.page-nav__link(href='#')
+              | Магазин
+          li.page-nav__item
+            a.page-nav__link
+              | Средства для ухода
+      .catalog__columns
+        form.catalog__filter
+          .catalog__filter-block
+            h2.catalog__filter-title
+              | Производители:
+            .catalog__filter-list
+              label.catalog__filter-item
+                input(type='checkbox', checked)
+                | Baxter of California
+              label.catalog__filter-item
+                input(type='checkbox')
+                | Mr Natty
+              label.catalog__filter-item
+                input(type='checkbox', checked)
+                | Suavecito
+              label.catalog__filter-item
+                input(type='checkbox')
+                | Malin+Goetz
+              label.catalog__filter-item
+                input(type='checkbox')
+                | Murray’s
+              label.catalog__filter-item
+                input(type='checkbox', checked)
+                | American Crew
+          .catalog__filter-block
+            h2.catalog__filter-title
+              | Группы товаров:
+            .catalog__filter-list
+              label.catalog__filter-item
+                input(type='radio', name='type')
+                | Бритвенные принадлежности
+              label.catalog__filter-item
+                input(type='radio', name='type', checked)
+                | Средства для ухода
+              label.catalog__filter-item
+                input(type='radio', name='type')
+                | Аксессуары
+          button.btn
+            | Показать
+        .catalog__column
+          .catalog__items
+            .catalog__item
+              .catalog__item-img-wrap
+                img(src='img/catalog-1.jpg', width='220', height='165', alt='')
+              p.catalog__item-desc
+                | Набор для путешествий «Baxter of California»
+              .catalog__item-price-wrap
+                span.catalog__item-price
+                  | 2900 руб.
+                button.catalog__item-buy.btn
+                  | Купить
+            .catalog__item
+              .catalog__item-img-wrap
+                img(src='img/catalog-2.jpg', width='220', height='165', alt='')
+              p.catalog__item-desc
+                | Увлажняющий кондиционер «Baxter of California»
+              .catalog__item-price-wrap
+                span.catalog__item-price
+                  | 750 руб.
+                button.catalog__item-buy.btn
+                  | Купить
+            .catalog__item
+              .catalog__item-img-wrap
+                img(src='img/catalog-3.jpg', width='220', height='165', alt='')
+              p.catalog__item-desc
+                | Гель для волос «SUAVECITO»
+              .catalog__item-price-wrap
+                span.catalog__item-price
+                  | 290 руб.
+                button.catalog__item-buy.btn
+                  | Купить
+            .catalog__item
+              .catalog__item-img-wrap
+                img(src='img/catalog-4.jpg', width='220', height='165', alt='')
+              p.catalog__item-desc
+                | Глина для укладки волос «American crew»
+              .catalog__item-price-wrap
+                span.catalog__item-price
+                  | 500 руб.
+                button.catalog__item-buy.btn
+                  | Купить
+            .catalog__item
+              .catalog__item-img-wrap
+                img(src='img/catalog-5.jpg', width='220', height='165', alt='')
+              p.catalog__item-desc
+                | Гель для волос «AMERICAN CREW»
+              .catalog__item-price-wrap
+                span.catalog__item-price
+                  | 300 руб.
+                button.catalog__item-buy.btn
+                  | Купить
+            .catalog__item
+              .catalog__item-img-wrap
+                img(src='img/catalog-6.jpg', width='220', height='165', alt='')
+              p.catalog__item-desc
+                | Набор для бритья «Baxter of California»
+              .catalog__item-price-wrap
+                span.catalog__item-price
+                  | 3900 руб.
+                button.catalog__item-buy.btn
+                  | Купить
+          .catalog__nav
+            ul.catalog__nav-items
+              li.catalog__nav-item
+                button.catalog__nav-btn
+                  | 1
+              li.catalog__nav-item
+                button.catalog__nav-btn
+                  | 2
+              li.catalog__nav-item
+                button.catalog__nav-btn
+                  | 3
+              li.catalog__nav-item
+                button.catalog__nav-btn
+                  | 4
