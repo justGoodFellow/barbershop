@@ -1,0 +1,57 @@
+extend ./layouts/base.pug
+
+block content
+  section.price
+    .price__wrapper
+      nav.page-nav
+        h2.page-nav__title
+          | Прайс-лист
+        ul.page-nav__list
+          li.page-nav__item
+            a.page-nav__link(href='index.html')
+              | Главная
+          li.page-nav__item
+            a.page-nav__link
+              | Прайс-лист
+      h2.price__title
+        | Истинно мужская классика
+      .price__columns
+        .price__column
+          h2
+            | Мы используем только лучшие средства:
+          ul.price__tools
+            li.price__tool
+              | Baxter of California
+            li.price__tool
+              | Mr Natty
+            li.price__tool
+              | Suavecito
+            li.price__tool
+              | Malin+Goetz
+        .price__column
+          h2
+            | Цены на услуги наших мастеров:
+          table.price__table
+            tr
+              td
+                | Стрижка
+              td
+                | 1500 р.
+            tr
+              td
+                | Стрижка бороды
+              td
+                | 500 р.
+            tr
+              td
+                | Накрутка усов
+              td
+                | 350 р.
+      .price__about-us
+        h2
+          | Несколько слов о нас:
+        .price__columns
+          p.price__column
+            | Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.
+          p.price__column
+            | Наша мастерская расположена в центре города, поэтому сделаaть стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!
