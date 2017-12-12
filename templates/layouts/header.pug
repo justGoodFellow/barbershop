@@ -24,3 +24,21 @@ header.page-header
         li.main-nav__item
           a.main-nav__link.main-nav__link--user(href='#')
             | Вход
+    .page-header__login.login
+      h2.login__title
+        | Личный кабинет
+      p.login__desc
+        | Введите пожалуйста свой логин и пароль
+      form.login__form
+        input.login__field.login__field--login(type='text', placeholder='Логин')
+        input.login__field.login__field--password(type='password', placeholder='Пароль')
+      .login__form-extra
+        label
+          input(type='checkbox', checked)
+          | Запомните меня
+        a.login__forgot-password(href='#')
+          | Я забыл пароль!
+      button.login__enter.btn(type='submit')
+        | Войти
+      button.login__close
+        | Закрыть
