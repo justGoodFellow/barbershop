@@ -1,0 +1,59 @@
+extend ./layouts/base.pug
+
+block content
+  section.product
+    .product__wrapper
+      nav.page-nav
+        h1.page-nav__title
+          | Набор для путешествий «Baxter of California»
+        ul.page-nav__list
+          li.page-nav__item
+            a.page-nav__link(href='index.html')
+              | Главная
+          li.page-nav__item
+            a.page-nav__link(href='#')
+              | Магазин
+          li.page-nav__item
+            a.page-nav__link(href='catalog.html')
+              | Средства для ухода
+          li.page-nav__item
+            a.page-nav__link
+              | Набор для путешествий «Baxter of California»
+      .product__container
+        .product__gallery
+          .product__gallery-item
+            img(src='img/product.jpg', width='460', height='499', alt='')
+          .product__gallery-item
+            img(src='img/product-preview-1.jpg', width='140', height='149', alt='')
+          .product__gallery-item
+            img(src='img/product-preview-2.jpg', width='140', height='149', alt='')
+          .product__gallery-item
+            img(src='img/product-preview-3.jpg', width='140', height='149', alt='')
+        .product__info
+          .product__info-main
+            .product__info-header
+              span.product__status
+                | Есть в наличии
+              span.product__code
+                | Артикул: dexter-ae
+            p.product__desc
+              | Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.
+            .product__buy-block
+              span.product__price
+                | 2900 руб.
+              button.product__buy.btn
+                | Купить
+          .product__set
+            h2.product__set-title
+              | В набор входят:
+            ul.product__set-list
+              li.product__set-item
+                | Средство для умывания (50 мл)
+              li.product__set-item
+                | Увлажняющий крем (50 мл)
+              li.product__set-item
+                | Крем для бритья (50 мл)
+              li.product__set-item
+                | Крем после бритья, шампунь (50 мл)
+              li.product__set-item
+                | Удобная кожаная косметичка
