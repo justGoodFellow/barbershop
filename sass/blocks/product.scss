@@ -1,0 +1,28 @@
+.product__wrapper {
+  @include container;
+}
+.product__container {
+  display: flex;
+  justify-content: space-between;
+}
+.product__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 460px;
+}
+.product__gallery-item {
+  margin-right: 20px;
+  &--big {
+    margin-right: 0;
+  }
+  &:nth-child(3n+1) {
+    margin-right: 0;
+  }
+}
+.product__info {
+  width: 390px;
+}
+.product__info-header {
+  display: flex;
+  justify-content: space-between;
+}

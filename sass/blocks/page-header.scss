@@ -1,0 +1,14 @@
+.page-header__wrapper {
+  @include container;
+}
+.main-nav {
+  display: flex;
+}
+.main-nav__list {
+  &--user {
+    margin-left: auto;
+  }
+}
+.page-header__login {
+  display: none;
+}

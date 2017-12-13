@@ -1,0 +1,16 @@
+.content__wrapper {
+  @include container;
+}
+.content__columns {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 80px;
+}
+.content__column {
+  &--left {
+    width: 380px;
+  }
+  &--right {
+    width: 300px;
+  }
+}

@@ -1,0 +1,14 @@
+.price__wrapper {
+  @include container;
+}
+.price__columns {
+  display: flex;
+  justify-content: space-between;
+}
+.price__column {
+  width: 460px;
+  &--text {
+    padding-right: 80px;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,10 @@
+.features__wrapper {
+  @include container;
+}
+.features__items {
+  display: flex;
+  justify-content: space-between;
+}
+.features__item {
+  width: 300px;
+}

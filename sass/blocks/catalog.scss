@@ -1,0 +1,26 @@
+.catalog__wrapper {
+  @include container;
+}
+.catalog__columns {
+  display: flex;
+  justify-content: space-between;
+}
+.catalog__filter {
+  width: 220px;
+}
+.catalog__content {
+  flex-shrink: 0;
+  width: 700px;
+}
+.catalog__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.catalog__item {
+  width: 220px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
