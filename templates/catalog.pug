@@ -4,7 +4,7 @@ block content
   section.catalog
     .catalog__wrapper
       nav.page-nav
-        h2.page-nav__title
+        h1.page-nav__title
           | Средства для ухода
         ul.page-nav__list
           li.page-nav__item
@@ -18,8 +18,8 @@ block content
               | Средства для ухода
       .catalog__columns
         form.catalog__filter
-          .catalog__filter-block
-            h2.catalog__filter-title
+          fieldset.catalog__filter-block
+            legend.catalog__filter-title
               | Производители:
             .catalog__filter-list
               label.catalog__filter-item
@@ -40,8 +40,8 @@ block content
               label.catalog__filter-item
                 input(type='checkbox', checked)
                 | American Crew
-          .catalog__filter-block
-            h2.catalog__filter-title
+          fieldset.catalog__filter-block
+            legend.catalog__filter-title
               | Группы товаров:
             .catalog__filter-list
               label.catalog__filter-item
@@ -61,8 +61,12 @@ block content
               .catalog__item-img-wrap
                 a(href='product-card.html')
                   img(src='img/catalog-1.jpg', width='220', height='165', alt='')
-              a.catalog__item-desc(href='product-card.html')
-                | Набор для путешествий «Baxter of California»
+              h2.catalog__item-desc
+                a.catalog__item-desc-link(href='product-card.html')
+                  span.catalog__item-type
+                    | Набор для путешествий
+                  span.catalog__item-company
+                    | «Baxter of California»
               .catalog__item-price-wrap
                 span.catalog__item-price
                 | 2900 руб.
@@ -72,8 +76,12 @@ block content
               .catalog__item-img-wrap
                 a(href='#')
                   img(src='img/catalog-2.jpg', width='220', height='165', alt='')
-              a.catalog__item-desc(href='#')
-                | Увлажняющий кондиционер «Baxter of California»
+              h2.catalog__item-desc
+                a.catalog__item-desc-link(href='#')
+                  span.catalog__item-type
+                    | Увлажняющий кондиционер
+                  span.catalog__item-company
+                    | «Baxter of California»
               .catalog__item-price-wrap
                 span.catalog__item-price
                   | 750 руб.
@@ -83,8 +91,12 @@ block content
               .catalog__item-img-wrap
                 a(href='#')
                   img(src='img/catalog-3.jpg', width='220', height='165', alt='')
-              a.catalog__item-desc(href='#')
-                | Гель для волос «SUAVECITO»
+              h2.catalog__item-desc
+                a.catalog__item-desc-link(href='#')
+                  span.catalog__item-type
+                    | Гель для волос
+                  span.catalog__item-company
+                    | «SUAVECITO»
               .catalog__item-price-wrap
                 span.catalog__item-price
                   | 290 руб.
@@ -94,8 +106,12 @@ block content
               .catalog__item-img-wrap
                 a(href='#')
                   img(src='img/catalog-4.jpg', width='220', height='165', alt='')
-              a.catalog__item-desc(href='#')
-                | Глина для укладки волос «American crew»
+              h2.catalog__item-desc
+                a.catalog__item-desc-link(href='#')
+                  span.catalog__item-type
+                    | Глина для укладки волос
+                  span.catalog__item-company
+                    | «American crew»
               .catalog__item-price-wrap
                 span.catalog__item-price
                   | 500 руб.
@@ -105,8 +121,12 @@ block content
               .catalog__item-img-wrap
                 a(href='#')
                   img(src='img/catalog-5.jpg', width='220', height='165', alt='')
-              a.catalog__item-desc(href='#')
-                | Гель для волос «AMERICAN CREW»
+              h2.catalog__item-desc
+                a.catalog__item-desc-link(href='#')
+                  span.catalog__item-type
+                    | Гель для волос
+                  span.catalog__item-company
+                    | «AMERICAN CREW»
               .catalog__item-price-wrap
                 span.catalog__item-price
                   | 300 руб.
@@ -116,8 +136,12 @@ block content
               .catalog__item-img-wrap
                 a(href='#')
                   img(src='img/catalog-6.jpg', width='220', height='165', alt='')
-              a.catalog__item-desc(href='#')
-                | Набор для бритья «Baxter of California»
+              h2.catalog__item-desc
+                a.catalog__item-desc-link(href='#')
+                  span.catalog__item-type
+                    | Набор для бритья
+                  span.catalog__item-company
+                    | «Baxter of California»
               .catalog__item-price-wrap
                 span.catalog__item-price
                   | 3900 руб.
