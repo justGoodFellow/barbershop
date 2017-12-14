@@ -3,19 +3,20 @@ extend ./layouts/base.pug
 block content
   section.catalog
     .catalog__wrapper
-      nav.page-nav
-        h1.page-nav__title
+      .catalog__header
+        h1.catalog__title
           | Средства для ухода
-        ul.page-nav__list
-          li.page-nav__item
-            a.page-nav__link(href='index.html')
-              | Главная
-          li.page-nav__item
-            a.page-nav__link(href='#')
-              | Магазин
-          li.page-nav__item
-            a.page-nav__link
-              | Средства для ухода
+        nav.page-nav
+          ul.page-nav__list
+            li.page-nav__item
+              a.page-nav__link(href='index.html')
+                | Главная
+            li.page-nav__item
+              a.page-nav__link(href='#')
+                | Магазин
+            li.page-nav__item
+              a.page-nav__link
+                | Средства для ухода
       .catalog__columns
         form.catalog__filter
           fieldset.catalog__filter-block
@@ -53,7 +54,7 @@ block content
               label.catalog__filter-item
                 input(type='radio', name='type')
                 | Аксессуары
-          button.btn
+          button.btn(type='submit')
             | Показать
         .catalog__content
           .catalog__items
@@ -70,7 +71,7 @@ block content
               .catalog__item-price-wrap
                 span.catalog__item-price
                 | 2900 руб.
-              button.catalog__item-buy.btn
+              button.catalog__item-buy.btn(type='button')
                 | Купить
             .catalog__item
               .catalog__item-img-wrap
@@ -85,7 +86,7 @@ block content
               .catalog__item-price-wrap
                 span.catalog__item-price
                   | 750 руб.
-                button.catalog__item-buy.btn
+                button.catalog__item-buy.btn(type='button')
                   | Купить
             .catalog__item
               .catalog__item-img-wrap
@@ -100,7 +101,7 @@ block content
               .catalog__item-price-wrap
                 span.catalog__item-price
                   | 290 руб.
-                button.catalog__item-buy.btn
+                button.catalog__item-buy.btn(type='button')
                   | Купить
             .catalog__item
               .catalog__item-img-wrap
@@ -115,7 +116,7 @@ block content
               .catalog__item-price-wrap
                 span.catalog__item-price
                   | 500 руб.
-                button.catalog__item-buy.btn
+                button.catalog__item-buy.btn(type='button')
                   | Купить
             .catalog__item
               .catalog__item-img-wrap
@@ -130,7 +131,7 @@ block content
               .catalog__item-price-wrap
                 span.catalog__item-price
                   | 300 руб.
-                button.catalog__item-buy.btn
+                button.catalog__item-buy.btn(type='button')
                   | Купить
             .catalog__item
               .catalog__item-img-wrap
@@ -145,19 +146,19 @@ block content
               .catalog__item-price-wrap
                 span.catalog__item-price
                   | 3900 руб.
-                button.catalog__item-buy.btn
+                button.catalog__item-buy.btn(type='button')
                   | Купить
           .catalog__nav
             ul.catalog__nav-items
               li.catalog__nav-item
-                button.catalog__nav-btn
+                button.catalog__nav-btn(type='button')
                   | 1
               li.catalog__nav-item
-                button.catalog__nav-btn
+                button.catalog__nav-btn(type='button')
                   | 2
               li.catalog__nav-item
-                button.catalog__nav-btn
+                button.catalog__nav-btn(type='button')
                   | 3
               li.catalog__nav-item
-                button.catalog__nav-btn
+                button.catalog__nav-btn(type='button')
                   | 4
