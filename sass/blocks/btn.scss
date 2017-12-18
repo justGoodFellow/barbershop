@@ -1,0 +1,27 @@
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 140px;
+  padding: 10px 5px;
+  overflow: hidden;
+
+  font: inherit;
+  vertical-align: top;
+  text-align: center;
+  color: white;
+  text-transform: inherit;
+  text-decoration: none;
+
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: $color-main;
+    outline: none;
+  }
+  &--fluid {
+    display: block;
+    width: 100%;
+  }
+}

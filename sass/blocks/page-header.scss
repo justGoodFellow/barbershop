@@ -1,12 +1,38 @@
+.page-header {
+  font-size: $font-size--large;
+  color: white;
+
+  background-color: black;
+}
 .page-header__wrapper {
   @include container;
 }
 .main-nav {
   display: flex;
 }
+.main-nav__logo {
+  display: none;
+}
 .main-nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
   &--user {
     margin-left: auto;
+  }
+}
+.main-nav__link {
+  display: block;
+  padding: 23px 20px;
+
+  color: white;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    background-color: #242424;
+    outline: none;
   }
 }
 .page-header__login {

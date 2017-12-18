@@ -1,3 +1,15 @@
+body {
+  min-width: 960px;
+
+  font-weight: bold;
+  font-size: $font-size;
+  line-height: $line-height--large;
+  font-family: $font-family;
+  color: white;
+  text-transform: uppercase;
+
+  background: #070707 url('../img/bg-index.jpg') center top no-repeat;
+}
 .visually-hidden {
   display: none;
 }

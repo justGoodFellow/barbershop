@@ -1,3 +1,9 @@
+.features {
+  margin-top: 15px;
+  margin-bottom: 65px;
+
+  text-align: center;
+}
 .features__wrapper {
   @include container;
 }
@@ -7,4 +13,27 @@
 }
 .features__item {
   width: 300px;
+}
+.features__item-title {
+  position: relative;
+
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+
+  font-size: $font-size--xx-large;
+  line-height: $line-height--xx-large;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+
+    background-color: white;
+    transform: rotate(45deg);
+  }
 }
