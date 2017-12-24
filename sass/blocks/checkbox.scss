@@ -1,0 +1,57 @@
+.radiobox__input,
+.checkbox__input {
+  display: none;
+  &:checked ~ .checkbox__label {
+    &::after {
+      display: block;
+    }
+  }
+}
+
+.radiobox__label,
+.checkbox__label {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+
+  &::before {
+    content: '';
+
+    display: block;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+    border: 2px solid black;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+
+    display: none;
+  }
+
+  &:hover {
+    color: $color-main;
+  }
+}
+
+.checkbox__label {
+  &::after {
+    top: 6px;
+    left: 4px;
+
+    width: 12px;
+    height: 12px;
+
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+    background-position: -10px -10px;
+  }
+}

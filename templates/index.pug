@@ -1,101 +1,113 @@
-extend ./layouts/base.pug
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title
+      | Borodinski
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    link(rel='stylesheet', href='css/style.min.css')
+  body.main-page
+    include layouts/header.pug
 
-block content
-  h1.visually-hidden
-    | Барбершоп "Бородинский"
-  .logo
-    .logo__wrapper
-      img(src='img/logo.png', width='368', height='204', alt='Барбершоп Бородинский')
-  section.features
-    .features__wrapper
-      .features__items
-        .features__item
-          h2.features__item-title
-            | Быстро
-          p.features__items-desc
-            | Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладетель стильной стрижки-минутки!
-        .features__item
-          h2.features__item-title
-            | Круто
-          p.features__items-desc
-            | Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.
-        .features__item
-          h2.features__item-title
-            | Дорого
-          p.features__items-desc
-            | Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определенный статус?
-  section.content
-    .content__wrapper
-      .content__columns
-        .content__column.content__column--left
-          h2.content__title
-            | Новости
-          .content__news-items
-            .content__news-item
-              p.content__news-desc
-                | Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки
-              time.content__news-time(datetime='2017-01-11')
-                | 11 января
-            .content__news-item
-              p.content__news-desc
-                | В нашей команде пополнение, Борис «бритва» Стригунец, обладетель множества титулов и наград пополнил наши стройные ряды
-              time.content__news-time(datetime='2017-01-18')
-                | 18 января
-          a.btn(href='#')
-            | Все новости
-        .content__column.content__column--right
-          .content__gallery
-            h2.content__title
-              | Фотогалерея
-            .content__gallery-items
-              figure.content__gallery-item
-                img(src='img/gallery-1.jpg', alt='Салон')
-            .content__gallery-btns
-              button.content__gallery-prev.btn(type='button')
-                | Назад
-              button.content__gallery-next.btn(type='button')
-                | Вперед
-  section.content
-    .content__wrapper
-      .content__columns
-        .content__column.content__column--left
-          h2.content__title
-            | Контактная информация
-          address.content__contacts-item.contacts
-            | Барбершоп «Бородинский»
-            br
-            | Адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-            br
-            | Телефон:
-            |
-            a.contacts__phone(href='tel:+74956660266')
-              | +7 (495) 666-02-66
-          p.content__contacts-item
-            | Время работы:
-            br
-            | пн — пт: с 10:00 до 22:00
-            br
-            | сб — вс: с 10:00 до 19:00
-          .content__contacts-btns
-            button.content__contacts-btn.btn(type='button')
-              | Как проехать
-            a(href='#').content__contacts-btn.btn
-              | Обратная связь
-        .content__column.content__column--right
-          h2.content__title
-            | Записаться
-          p
-            | Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони
-          form
-            .content__form-fields
-              input.content__form-field(type='text', placeholder='Дата')
-              input.content__form-field(type='text', placeholder='Время')
-              input.content__form-field(type='text', placeholder='Ваше имя')
-              input.content__form-field(type='tel', placeholder='Телефон')
-            button(type='submit').content__form-submit.btn.btn--fluid
-              | Отправить
-  .map
-    .map__wrapper
-      img(src='img/map.jpg', width='766', height='560', alt='Карта')
-    button.map__close(type='button')
-      | Закрыть
+    main
+      h1.visually-hidden
+        | Барбершоп "Бородинский"
+      .logo
+        .logo__wrapper
+          img(src='img/logo.png', width='368', height='204', alt='Барбершоп Бородинский')
+      section.features
+        .features__wrapper
+          .features__items
+            .features__item
+              h2.features__item-title
+                | Быстро
+              p.features__items-desc
+                | Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладетель стильной стрижки-минутки!
+            .features__item
+              h2.features__item-title
+                | Круто
+              p.features__items-desc
+                | Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.
+            .features__item
+              h2.features__item-title
+                | Дорого
+              p.features__items-desc
+                | Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определенный статус?
+      section.content
+        .content__wrapper
+          .content__columns
+            .content__column.content__column--left
+              h2.content__title
+                | Новости
+              .content__news-items
+                .content__news-item
+                  p.content__news-desc
+                    | Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки
+                  time.content__news-time(datetime='2017-01-11')
+                    | 11 января
+                .content__news-item
+                  p.content__news-desc
+                    | В нашей команде пополнение, Борис «бритва» Стригунец, обладетель множества титулов и наград пополнил наши стройные ряды
+                  time.content__news-time(datetime='2017-01-18')
+                    | 18 января
+              a.btn(href='#')
+                | Все новости
+            .content__column.content__column--right
+              .content__gallery
+                h2.content__title
+                  | Фотогалерея
+                .content__gallery-items
+                  figure.content__gallery-item
+                    img(src='img/gallery-1.jpg', alt='Салон')
+                .content__gallery-btns
+                  button.content__gallery-prev.btn(type='button')
+                    | Назад
+                  button.content__gallery-next.btn(type='button')
+                    | Вперед
+      section.content
+        .content__wrapper
+          .content__columns
+            .content__column.content__column--left
+              h2.content__title
+                | Контактная информация
+              address.content__contacts-item.contacts
+                | Барбершоп «Бородинский»
+                br
+                | Адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+                br
+                | Телефон:
+                |
+                a.contacts__phone(href='tel:+74956660266')
+                  | +7 (495) 666-02-66
+              p.content__contacts-item
+                | Время работы:
+                br
+                | пн — пт: с 10:00 до 22:00
+                br
+                | сб — вс: с 10:00 до 19:00
+              .content__contacts-btns
+                button.content__contacts-btn.btn(type='button')
+                  | Как проехать
+                a(href='#').content__contacts-btn.btn
+                  | Обратная связь
+            .content__column.content__column--right
+              h2.content__title
+                | Записаться
+              p
+                | Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони
+              form
+                .content__form-fields
+                  input.content__form-field.field(type='text', placeholder='Дата')
+                  input.content__form-field.field(type='text', placeholder='Время')
+                  input.content__form-field.field(type='text', placeholder='Ваше имя')
+                  input.content__form-field.field(type='tel', placeholder='Телефон')
+                button(type='submit').content__form-submit.btn.btn--fluid
+                  | Отправить
+      .map.modal
+        .map__wrapper
+          img(src='img/map.jpg', width='766', height='560', alt='Карта')
+        button.map__close.modal__close-btn(type='button')
+          | Закрыть
+
+    include layouts/footer.pug
+    script(src='js/concatenated.js')

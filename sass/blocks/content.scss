@@ -63,22 +63,9 @@
   margin-top: 20px;
 }
 .content__form-field {
-  box-sizing: border-box;
   width: 140px;
   margin-right: 20px;
-  margin-bottom: 20px;
-  padding: 10px 15px;
-
-  font: inherit;
-  line-height: 20px;
-  text-transform: inherit;
-
-  border: 2px solid black;
-  border-radius: 0;
   &:nth-child(even) {
     margin-right: 0;
-  }
-  &:focus {
-    border-color: $color-main;
   }
 }

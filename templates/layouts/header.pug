@@ -1,9 +1,8 @@
 header.page-header
   .page-header__wrapper
     nav.main-nav
-      .main-nav__logo
-        a(href='index.html')
-          img(src='img/logo--small.png', width='111', height='24', alt='Барбершоп')
+      a.main-nav__logo(href='index.html')
+        img(src='img/logo--small.png', width='111', height='24', alt='Барбершоп')
       ul.main-nav__list.main-nav__list--main
         li.main-nav__item
           a.main-nav__link(href='#')
@@ -24,21 +23,23 @@ header.page-header
         li.main-nav__item
           a.main-nav__link.main-nav__link--user(href='#')
             | Вход
-    .page-header__login.login
+    .page-header__login.login.modal
       b.login__title
         | Личный кабинет
       p.login__desc
         | Введите пожалуйста свой логин и пароль
       form.login__form
-        input.login__field.login__field--login(type='text', placeholder='Логин')
-        input.login__field.login__field--password(type='password', placeholder='Пароль')
-      .login__form-extra
-        label
-          input(type='checkbox', checked)
-          | Запомните меня
+        input.login__field.login__field--login.field.field--fluid(type='text', placeholder='Логин')
+        input.login__field.login__field--password.field.field--fluid(type='password', placeholder='Пароль')
+      .login__form-container
+        .checkbox
+          input.checkbox__input(type='checkbox', id='remember' checked)
+          label.checkbox__label(for='remember')
+            | Запомните меня
         a.login__forgot-password(href='#')
           | Я забыл пароль!
-      button.login__enter.btn(type='submit')
+      button.login__enter.btn.btn--fluid(type='submit')
         | Войти
-      button.login__close(type='button')
+      button.login__close.modal__close-btn(type='button')
         | Закрыть
+    .modal-overlay

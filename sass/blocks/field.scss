@@ -1,0 +1,23 @@
+.field {
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+
+  font: inherit;
+  line-height: 20px;
+  text-transform: inherit;
+
+  background-color: $color-main--light;
+  border: 2px solid black;
+  border-radius: 0;
+  &:focus {
+    border-color: $color-main;
+  }
+  &::placeholder {
+    color: black;
+  }
+
+  &--fluid {
+    width: 100%;
+  }
+}
