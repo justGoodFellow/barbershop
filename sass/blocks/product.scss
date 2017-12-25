@@ -5,6 +5,9 @@
   display: flex;
   justify-content: space-between;
 }
+.product__code {
+  color: $gray;
+}
 .product__gallery {
   display: flex;
   flex-wrap: wrap;
@@ -12,11 +15,18 @@
 }
 .product__gallery-item {
   margin-right: 20px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 0 15px rgba(black, 0.2);
   &--big {
     margin-right: 0;
   }
   &:nth-child(3n+1) {
     margin-right: 0;
+  }
+
+  img {
+    display: block;
   }
 }
 .product__info {
@@ -25,4 +35,8 @@
 .product__info-header {
   display: flex;
   justify-content: space-between;
+}
+.product__set-title {
+  font-size: $font-size--x-large;
+  line-height: $line-height--x-large;
 }

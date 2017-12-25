@@ -6,12 +6,15 @@
     display: none;
   }
   main {
+    padding: 0;
+
     color: white;
 
     background-color: transparent;
   }
   .page-footer {
-    box-shadow: none;
     margin-top: 60px;
+
+    box-shadow: none;
   }
 }

@@ -1,60 +1,117 @@
-extend ./layouts/base.pug
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title
+      | Borodinski
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    link(rel='stylesheet', href='css/style.min.css')
+  body
 
-block content
-  section.product
-    .product__wrapper
-      .product__header
-        h1.product__title
-          | Набор для путешествий «Baxter of California»
-        nav.page-nav
-          ul.page-nav__list
-            li.page-nav__item
-              a.page-nav__link(href='index.html')
-                | Главная
-            li.page-nav__item
-              a.page-nav__link(href='#')
+    header.page-header
+      .page-header__wrapper
+        nav.main-nav
+          a.main-nav__logo(href='index.html')
+            img(src='img/logo--small.png', width='111', height='24', alt='Барбершоп')
+          ul.main-nav__list.main-nav__list--main
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Информация
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Новости
+            li.main-nav__item
+              a.main-nav__link(href='price-list.html')
+                | Прайс-лист
+            li.main-nav__item.main-nav__item--active
+              a.main-nav__link(href='catalog.html')
                 | Магазин
-            li.page-nav__item
-              a.page-nav__link(href='catalog.html')
-                | Средства для ухода
-            li.page-nav__item
-              a.page-nav__link
-                | Набор для путешествий «Baxter of California»
-      .product__container
-        .product__gallery
-          .product__gallery-item.product__gallery-item--big
-            img(src='img/product.jpg', width='460', height='499', alt='')
-          .product__gallery-item
-            img(src='img/product-preview-1.jpg', width='140', height='149', alt='')
-          .product__gallery-item
-            img(src='img/product-preview-2.jpg', width='140', height='149', alt='')
-          .product__gallery-item
-            img(src='img/product-preview-3.jpg', width='140', height='149', alt='')
-        .product__info
-          .product__info-main
-            .product__info-header
-              span.product__status
-                | Есть в наличии
-              span.product__code
-                | Артикул: dexter-ae
-            p.product__desc
-              | Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.
-            .product__buy-block
-              span.product__price
-                | 2900 руб.
-              button.product__buy.btn(type='button')
-                | Купить
-          .product__set
-            h2.product__set-title
-              | В набор входят:
-            ul.product__set-list
-              li.product__set-item
-                | Средство для умывания (50 мл)
-              li.product__set-item
-                | Увлажняющий крем (50 мл)
-              li.product__set-item
-                | Крем для бритья (50 мл)
-              li.product__set-item
-                | Крем после бритья, шампунь (50 мл)
-              li.product__set-item
-                | Удобная кожаная косметичка
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Контакты
+          ul.main-nav__list.main-nav__list--user
+            li.main-nav__item
+              a.main-nav__link.main-nav__link--user(href='#')
+                | Вход
+        .page-header__login.login.modal
+          b.login__title
+            | Личный кабинет
+          p.login__desc
+            | Введите пожалуйста свой логин и пароль
+          form.login__form
+            input.login__field.login__field--login.field.field--fluid(type='text', placeholder='Логин')
+            input.login__field.login__field--password.field.field--fluid(type='password', placeholder='Пароль')
+          .login__form-container
+            .checkbox
+              input.checkbox__input(type='checkbox', id='remember' checked)
+              label.checkbox__label(for='remember')
+                | Запомните меня
+            a.login__forgot-password(href='#')
+              | Я забыл пароль!
+          button.login__enter.btn.btn--fluid(type='submit')
+            | Войти
+          button.login__close.modal__close-btn(type='button')
+            | Закрыть
+        .modal-overlay
+
+    main
+      section.product
+        .product__wrapper
+          .main-header
+            h1.main-header__title
+              | Набор для путешествий «Baxter of California»
+            nav.main-header__nav.page-nav
+              ul.page-nav__list
+                li.page-nav__item
+                  a.page-nav__link(href='index.html')
+                    | Главная
+                li.page-nav__item
+                  a.page-nav__link(href='#')
+                    | Магазин
+                li.page-nav__item
+                  a.page-nav__link(href='catalog.html')
+                    | Средства для ухода
+                li.page-nav__item
+                  a.page-nav__link
+                    | Набор для путешествий «Baxter of California»
+          .product__container
+            .product__gallery
+              .product__gallery-item.product__gallery-item--big
+                img(src='img/product.jpg', width='460', height='499', alt='')
+              .product__gallery-item
+                img(src='img/product-preview-1.jpg', width='140', height='149', alt='')
+              .product__gallery-item
+                img(src='img/product-preview-2.jpg', width='140', height='149', alt='')
+              .product__gallery-item
+                img(src='img/product-preview-3.jpg', width='140', height='149', alt='')
+            .product__info
+              .product__info-main
+                .product__info-header
+                  span.product__status
+                    | Есть в наличии
+                  span.product__code
+                    | Артикул: dexter-ae
+                p.product__desc
+                  | Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.
+                .purchase-block
+                  span.purchase-block__price
+                    | 2900 руб.
+                  button.purchase-block__buy-btn.btn(type='button')
+                    | Купить
+              .product__set
+                h2.product__set-title
+                  | В набор входят:
+                ul.product__set-list.unordered-list
+                  li.product__set-item.unordered-list__item
+                    | Средство для умывания (50 мл)
+                  li.product__set-item.unordered-list__item
+                    | Увлажняющий крем (50 мл)
+                  li.product__set-item.unordered-list__item
+                    | Крем для бритья (50 мл)
+                  li.product__set-item.unordered-list__item
+                    | Крем после бритья, шампунь (50 мл)
+                  li.product__set-item.unordered-list__item
+                    | Удобная кожаная косметичка
+
+    include layouts/footer.pug
+    script(src='js/concatenated.js')

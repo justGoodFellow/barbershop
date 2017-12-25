@@ -1,0 +1,20 @@
+.purchase-block {
+  display: flex;
+  align-items: center;
+}
+.purchase-block__price {
+  width: 110px;
+  padding: 0 5px;
+  overflow: hidden;
+
+  line-height: 45px;
+  text-align: center;
+
+  background-color: #e5e5e5;
+}
+.purchase-block__buy-btn {
+  width: 80px;
+  padding: 0 5px;
+
+  line-height: 45px;
+}
