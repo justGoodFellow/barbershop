@@ -1,9 +1,19 @@
 .radiobox__input,
 .checkbox__input {
   display: none;
-  &:checked ~ .checkbox__label {
+  &:checked ~ .checkbox__label,
+  &:checked ~ .radiobox__label {
     &::after {
       display: block;
+    }
+  }
+  &:disabled ~ .checkbox__label,
+  &:disabled ~ .radiobox__label {
+    opacity: 0.3;
+    &:hover {
+      color: black;
+
+      cursor: default;
     }
   }
 }
@@ -13,7 +23,6 @@
   position: relative;
 
   display: flex;
-  align-items: center;
 
   cursor: pointer;
 
@@ -26,6 +35,7 @@
     box-sizing: border-box;
     width: 20px;
     height: 20px;
+    margin-top: 2px;
     margin-right: 10px;
 
     border: 2px solid black;

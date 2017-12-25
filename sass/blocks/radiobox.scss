@@ -1,0 +1,15 @@
+.radiobox__label {
+  &::before,
+  &::after {
+    border-radius: 50%;
+  }
+  &::after {
+    top: 8px;
+    left: 6px;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: black;
+  }
+}

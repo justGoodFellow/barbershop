@@ -1,6 +1,56 @@
+.catalog {
+  padding: 5px 0;
+  padding-bottom: 50px;
+}
 .catalog__wrapper {
   @include container;
 }
+.catalog__header {
+  margin: 30px 0;
+}
+.catalog__title {
+  font-size: $font-size--xx-large;
+  line-height: $line-height--xx-large;
+}
+
+.page-nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+.page-nav__item {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: '';
+
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin-right: 15px;
+    margin-left: 15px;
+
+    background-color: black;
+    transform: rotate(45deg);
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+}
+.page-nav__link {
+  color: inherit;
+  text-decoration: none;
+  &:not([href]) {
+    color: #aba9a7;
+  }
+}
+
 .catalog__columns {
   display: flex;
   justify-content: space-between;
@@ -8,6 +58,23 @@
 .catalog__filter {
   width: 220px;
 }
+.catalog__filter-block {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  border: none;
+}
+.catalog__filter-title {
+  margin-bottom: 10px;
+
+  font-size: $font-size--x-large;
+  line-height: $line-height--x-large;
+}
+.catalog__filter-submit {
+  width: 110px;
+}
+
 .catalog__content {
   flex-shrink: 0;
   width: 700px;
@@ -20,7 +87,81 @@
   width: 220px;
   margin-right: 20px;
   margin-bottom: 20px;
+
+  background-color: white;
+  box-shadow: 0 0 15px rgba(black, 0.2);
   &:nth-child(3n) {
     margin-right: 0;
+  }
+
+  &:hover {
+    box-shadow: 5px 5px 25px rgba(black, 0.3);
+  }
+}
+.catalog__item-img-wrap {
+  a {
+    display: block;
+  }
+  img {
+    display: block;
+  }
+}
+.catalog__item-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 15px;
+  padding-top: 0;
+}
+.catalog__item-desc-link {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: inherit;
+  text-decoration: none;
+}
+.catalog__item-type {
+  display: block;
+
+  text-transform: none;
+}
+.catalog__item-price-wrap {
+  display: flex;
+  align-items: center;
+}
+.catalog__item-price {
+  width: 110px;
+  padding: 0 5px;
+  overflow: hidden;
+
+  line-height: 45px;
+  text-align: center;
+
+  background-color: #e5e5e5;
+}
+.catalog__item-buy {
+  width: 80px;
+  padding: 0 5px;
+
+  line-height: 45px;
+}
+
+.catalog__nav {
+  margin: 20px 0;
+}
+.catalog__nav-items {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+.catalog__nav-btn {
+  width: 44px;
+  margin-right: 7px;
+  &:disabled {
+    color: black;
+
+    background-color: white;
+    cursor: default;
   }
 }
