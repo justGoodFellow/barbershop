@@ -1,11 +1,11 @@
 .page-footer {
-  box-shadow: inset 0 40px 30px -20px rgba(black, 0.5);
   padding-top: 60px;
   padding-bottom: 45px;
 
   color: white;
 
   background: #222222;
+  box-shadow: inset 0 30px 40px -15px black;
 }
 .page-footer__wrapper {
   @include container;

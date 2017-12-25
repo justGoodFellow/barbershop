@@ -1,57 +1,122 @@
-extend ./layouts/base.pug
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title
+      | Borodinski
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    link(rel='stylesheet', href='css/style.min.css')
+  body
 
-block content
-  section.price
-    .price__wrapper
-      nav.page-nav
-        h2.page-nav__title
-          | Прайс-лист
-        ul.page-nav__list
-          li.page-nav__item
-            a.page-nav__link(href='index.html')
-              | Главная
-          li.page-nav__item
-            a.page-nav__link
+    header.page-header
+      .page-header__wrapper
+        nav.main-nav
+          a.main-nav__logo(href='index.html')
+            img(src='img/logo--small.png', width='111', height='24', alt='Барбершоп')
+          ul.main-nav__list.main-nav__list--main
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Информация
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Новости
+            li.main-nav__item.main-nav__item--active
+              a.main-nav__link
+                | Прайс-лист
+            li.main-nav__item
+              a.main-nav__link(href='catalog.html')
+                | Магазин
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Контакты
+          ul.main-nav__list.main-nav__list--user
+            li.main-nav__item
+              a.main-nav__link.main-nav__link--user(href='#')
+                | Вход
+        .page-header__login.login.modal
+          b.login__title
+            | Личный кабинет
+          p.login__desc
+            | Введите пожалуйста свой логин и пароль
+          form.login__form
+            input.login__field.login__field--login.field.field--fluid(type='text', placeholder='Логин')
+            input.login__field.login__field--password.field.field--fluid(type='password', placeholder='Пароль')
+          .login__form-container
+            .checkbox
+              input.checkbox__input(type='checkbox', id='remember' checked)
+              label.checkbox__label(for='remember')
+                | Запомните меня
+            a.login__forgot-password(href='#')
+              | Я забыл пароль!
+          button.login__enter.btn.btn--fluid(type='submit')
+            | Войти
+          button.login__close.modal__close-btn(type='button')
+            | Закрыть
+        .modal-overlay
+
+    main
+      section.price
+        .price__wrapper
+          .main-header
+            h2.main-header__title
               | Прайс-лист
-      h1.price__title
-        | Истинно мужская классика
-      .price__columns
-        .price__column
-          h2
-            | Мы используем только лучшие средства:
-          ul.price__tools
-            li.price__tool
-              | Baxter of California
-            li.price__tool
-              | Mr Natty
-            li.price__tool
-              | Suavecito
-            li.price__tool
-              | Malin+Goetz
-        .price__column
-          h2
-            | Цены на услуги наших мастеров:
-          table.price__table
-            tr
-              td
-                | Стрижка
-              td
-                | 1500 р.
-            tr
-              td
-                | Стрижка бороды
-              td
-                | 500 р.
-            tr
-              td
-                | Накрутка усов
-              td
-                | 350 р.
-      .price__about-us
-        h2
-          | Несколько слов о нас:
-        .price__columns
-          p.price__column.price__column--text
-            | Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.
-          p.price__column.price__column--text
-            | Наша мастерская расположена в центре города, поэтому сделаaть стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!
+            nav.main-header__nav.page-nav
+              ul.page-nav__list
+                li.page-nav__item
+                  a.page-nav__link(href='index.html')
+                    | Главная
+                li.page-nav__item
+                  a.page-nav__link
+                    | Прайс-лист
+          h1.price__title
+            | Истинно мужская классика
+          .default-content
+            .default-content__columns
+              .default-content__column
+                h2
+                  | Мы используем только
+                  br
+                  | лучшие средства:
+                ul.price__tools.unordered-list
+                  li.price__tool
+                    | Baxter of California
+                  li.price__tool
+                    | Mr Natty
+                  li.price__tool
+                    | Suavecito
+                  li.price__tool
+                    | Malin+Goetz
+              .default-content__column
+                h2
+                  | Цены на услуги
+                  br
+                  | наших мастеров:
+                table.price__table
+                  tr
+                    td
+                      | Стрижка
+                    td
+                      | 1500 р.
+                  tr
+                    td
+                      | Стрижка бороды
+                    td
+                      | 500 р.
+                  tr
+                    td
+                      | Накрутка усов
+                    td
+                      | 350 р.
+            .price__about-us
+              h2
+                | Несколько слов о нас:
+              .default-content__columns
+                .default-content__column
+                  p.default-content__short-text
+                    | Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.
+                .default-content__column
+                  p.default-content__short-text
+                    | Наша мастерская расположена в центре города, поэтому сделаaть стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!
+
+    include layouts/footer.pug
+    script(src='js/concatenated.js')
