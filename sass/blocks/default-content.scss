@@ -12,7 +12,7 @@
     li {
       display: flex;
       align-items: center;
-      margin: 10px 0;
+      margin: 13px 0;
       &::before {
         content: '';
 
@@ -32,7 +32,7 @@
     border-collapse: collapse;
   }
   td {
-    padding: 10px 15px;
+    padding: 8px 15px;
 
     border: 2px solid black;
   }
@@ -41,6 +41,7 @@
 .default-content__columns {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 25px;
 }
 .default-content__column {
   width: 460px;

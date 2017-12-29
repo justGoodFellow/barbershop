@@ -12,8 +12,8 @@
   align-items: center;
 }
 .main-nav__logo {
-  // display: none;
   width: 140px;
+  margin-right: 10px;
 
   text-align: center;
   img {
@@ -89,7 +89,7 @@
   }
 }
 .page-header__login {
-  // display: none;
+  display: none;
 }
 
 .login {
@@ -125,6 +125,10 @@
 .login__form-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  .checkbox__label::before {
+    margin-right: 12px;
+  }
 }
 .login__forgot-password {
   color: inherit;
