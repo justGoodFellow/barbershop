@@ -97,10 +97,10 @@ html(lang='ru')
                 | Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони
               form
                 .content__form-fields
-                  input.content__form-field.field(type='text', placeholder='Дата')
-                  input.content__form-field.field(type='text', placeholder='Время')
-                  input.content__form-field.field(type='text', placeholder='Ваше имя')
-                  input.content__form-field.field(type='tel', placeholder='Телефон')
+                  input.content__form-field.field(type='text', placeholder='Дата', required)
+                  input.content__form-field.field(type='text', placeholder='Время', required)
+                  input.content__form-field.field(type='text', placeholder='Ваше имя', required)
+                  input.content__form-field.field(type='tel', placeholder='Телефон', required)
                 button(type='submit').content__form-submit.btn.btn--fluid
                   | Отправить
       .map.modal
