@@ -3,6 +3,9 @@
 }
 .logo__wrapper {
   @include container;
-
-  text-align: center;
+}
+.logo__img-wrap {
+  width: 368px;
+  height: 204px;
+  margin: 0 auto;
 }

@@ -1,5 +1,6 @@
 {
   "name": "barbershop-old",
+  "description": "Учебный проект - Барбершоп Бородинский",
   "main": "templates/index.pug",
   "repository": "git@github.com:justGoodFellow/barbershop-old.git",
   "author": "Sergey Bodnaryuk <bodnaryuk_s.a@hotmail.com>",

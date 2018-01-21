@@ -1,6 +1,7 @@
 .map {
   display: none;
   width: 780px;
+  min-height: 560px;
   margin-top: -280px;
   margin-left: -390px;
 
@@ -17,6 +18,11 @@
     z-index: -10;
 
     display: block;
+    height: 560px;
+
+    color: black;
+
+    background-color: $color-main--light;
   }
   iframe {
     position: absolute;
@@ -24,6 +30,8 @@
     left: 0;
 
     display: block;
+
+    border: none;
   }
 }
 .map__close {

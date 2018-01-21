@@ -7,6 +7,11 @@
     font-size: $font-size--x-large;
     line-height: $line-height--x-large;
   }
+  p {
+    a {
+      color: black;
+    }
+  }
 
   .unordered-list {
     li {

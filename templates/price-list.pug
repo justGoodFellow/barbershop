@@ -3,7 +3,7 @@ html(lang='ru')
   head
     meta(charset='utf-8')
     title
-      | Borodinski
+      | Барбершоп Бородинский
     meta(http-equiv='x-ua-compatible', content='ie=edge')
     link(rel='stylesheet', href='css/style.min.css')
   body
@@ -33,25 +33,9 @@ html(lang='ru')
             li.main-nav__item
               a.main-nav__link.main-nav__link--user(href='#')
                 | Вход
-        .page-header__login.login.modal
-          b.login__title
-            | Личный кабинет
-          p.login__desc
-            | Введите пожалуйста свой логин и пароль
-          form.login__form
-            input.login__field.login__field--login.field.field--fluid(type='text', placeholder='Логин')
-            input.login__field.login__field--password.field.field--fluid(type='password', placeholder='Пароль')
-          .login__form-container
-            .checkbox
-              input.checkbox__input(type='checkbox', id='remember' checked)
-              label.checkbox__label(for='remember')
-                | Запомните меня
-            a.login__forgot-password(href='#')
-              | Я забыл пароль!
-          button.login__enter.btn.btn--fluid(type='submit')
-            | Войти
-          button.login__close.modal__close-btn(type='button')
-            | Закрыть
+
+        include blocks/login.pug
+
         .modal-overlay
 
     main
@@ -119,4 +103,4 @@ html(lang='ru')
                     | Наша мастерская расположена в центре города, поэтому сделаaть стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!
 
     include layouts/footer.pug
-    script(src='js/concatenated.js')
+    script(src='js/concatenated.min.js')

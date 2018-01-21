@@ -46,7 +46,14 @@
 }
 .content__gallery-item {
   margin: 0;
+  a {
+    display: block;
+  }
   img {
+    display: block;
+    height: 164px;
+
+    background-color: $gray;
     border: 7px solid white;
   }
 }

@@ -1,0 +1,19 @@
+.page-header__login.login.modal
+  b.login__title
+    | Личный кабинет
+  p.login__desc
+    | Введите пожалуйста свой логин и пароль
+  form.login__form(action='#')
+    input.login__field.login__field--login.field.field--fluid(type='text', name='login', placeholder='Логин')
+    input.login__field.login__field--password.field.field--fluid(type='password', name='password', placeholder='Пароль')
+    .login__form-container
+      .checkbox
+        input.checkbox__input(type='checkbox', id='remember' checked)
+        label.checkbox__label(for='remember')
+          | Запомните меня
+      a.login__forgot-password(href='#')
+        | Я забыл пароль!
+    button.login__enter.btn.btn--fluid(type='submit')
+      | Войти
+    button.login__close.modal__close-btn(type='button')
+      | Закрыть

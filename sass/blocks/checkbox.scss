@@ -5,13 +5,22 @@
 
 .radiobox__input,
 .checkbox__input {
-  display: none;
+  position: absolute;
+
+  opacity: 0;
+
+  &:focus ~ .checkbox__label,
+  &:focus ~ .radiobox__label {
+    color: $color-main;
+  }
+
   &:checked ~ .checkbox__label,
   &:checked ~ .radiobox__label {
     &::after {
       display: block;
     }
   }
+
   &:disabled ~ .checkbox__label,
   &:disabled ~ .radiobox__label {
     opacity: 0.3;
