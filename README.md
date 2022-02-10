@@ -1,8 +1,11 @@
 #### Установка зависимостей проекта
-    yarn
-
-#### Сборка и запуск localhost
-    npm start
+`yarn`
 
 #### Сборка
-    npm run build
+`npm run build`
+
+#### Сборка и запуск localhost
+`npm start`
+
+#### Тестирование
+`npm test`
