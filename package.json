@@ -5,33 +5,48 @@
   "author": "Sergey Bodnaryuk <s.bodnaryuk@gmail.com>",
   "private": true,
   "engines": {
-    "node": "8.17.0"
+    "node": "10.24.1"
   },
   "scripts": {
-    "test": "editorconfig-tools check *",
-    "build": "gulp build",
-    "start": "npm run build && gulp serve"
+    "editorconfig": "editorconfig-cli",
+    "pug-lint": "pug-lint templates/**/*.pug",
+    "stylelint": "stylelint \"sass/**/*.scss\"",
+    "eslint": "eslint js",
+    "test": "npm run editorconfig && npm run pug-lint && npm run stylelint && npm run eslint",
+    "build": "gulp",
+    "start": "gulp && gulp serve"
   },
+  "editorconfig-cli": [
+    "*.js",
+    "*.json",
+    "templates/**/*.pug",
+    "img/*.svg",
+    "sass/**/*.scss",
+    "js/*.js"
+  ],
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
     "autoprefixer": "^7.1.4",
-    "browser-sync": "^2.18.13",
-    "css-mqpacker": "^6.0.1",
+    "browser-sync": "^2.27.10",
+    "css-mqpacker": "^7.0.0",
     "del": "^3.0.0",
-    "editorconfig-tools": "^0.1.1",
     "eslint": "^4.15.0",
     "eslint-config-htmlacademy": "^0.4.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.0",
-    "gulp-imagemin": "^4.0.0",
-    "gulp-minify": "^2.1.0",
-    "gulp-plumber": "^1.1.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-minify": "^3.1.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^7.0.0",
-    "gulp-pug": "^3.3.0",
+    "gulp-pug": "^5.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^4.1.1",
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.0",
-    "run-sequence": "^2.2.0"
-  }
+    "pug-lint": "^2.6.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-htmlacademy": "^0.1.12"
+  },
+  "dependencies": {}
 }
