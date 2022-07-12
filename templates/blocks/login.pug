@@ -4,11 +4,17 @@
   p.login__desc
     | Введите пожалуйста свой логин и пароль
   form.login__form(action='#')
-    input.login__field.login__field--login.field.field--fluid(type='text', name='login', placeholder='Логин')
-    input.login__field.login__field--password.field.field--fluid(type='password', name='password', placeholder='Пароль')
+    input.login__field.login__field--login.field.field--fluid(
+      type='text'
+      name='login'
+      placeholder='Логин')
+    input.login__field.login__field--password.field.field--fluid(
+      type='password'
+      name='password'
+      placeholder='Пароль')
     .login__form-container
       .checkbox
-        input.checkbox__input(type='checkbox', id='remember' checked)
+        input.checkbox__input(id='remember' type='checkbox' checked)
         label.checkbox__label(for='remember')
           | Запомните меня
       a.login__forgot-password(href='#')

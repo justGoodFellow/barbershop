@@ -1,18 +1,17 @@
 doctype html
 html(lang='ru')
-  head
-    meta(charset='utf-8')
-    title
-      | Барбершоп Бородинский
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-    link(rel='stylesheet', href='css/style.min.css')
-  body
+  include layouts/head.pug
 
+  body
     header.page-header
       .page-header__wrapper
         nav.main-nav
           a.main-nav__logo(href='index.html')
-            img(src='img/logo--small.png', width='111', height='24', alt='Барбершоп')
+            img(
+              src='img/logo--small.png'
+              width='111'
+              height='24'
+              alt='Барбершоп')
           ul.main-nav__list.main-nav__list--main
             li.main-nav__item
               a.main-nav__link(href='#')
@@ -37,7 +36,6 @@ html(lang='ru')
         include blocks/login.pug
 
         .modal-overlay
-
     main
       section.catalog
         .catalog__wrapper
@@ -62,44 +60,78 @@ html(lang='ru')
                   | Производители:
                 .catalog__filter-list
                   .checkbox
-                    input.checkbox__input(type='checkbox', id='baxterofcalifornia', checked)
-                    label.catalog__filter-item.checkbox__label(for='baxterofcalifornia')
+                    input.checkbox__input(
+                      id='baxterofcalifornia'
+                      type='checkbox'
+                      checked)
+                    label.catalog__filter-item.checkbox__label(
+                      for='baxterofcalifornia')
                       | Baxter of California
                   .checkbox
-                    input.checkbox__input(type='checkbox', id='mrnatty')
-                    label.catalog__filter-item.checkbox__label(for='mrnatty')
+                    input.checkbox__input(
+                      id='mrnatty'
+                      type='checkbox')
+                    label.catalog__filter-item.checkbox__label(
+                      for='mrnatty')
                       | Mr Natty
                   .checkbox
-                    input.checkbox__input(type='checkbox', id='suavecito', checked)
-                    label.catalog__filter-item.checkbox__label(for='suavecito')
+                    input.checkbox__input(
+                      id='suavecito'
+                      type='checkbox'
+                      checked)
+                    label.catalog__filter-item.checkbox__label(
+                      for='suavecito')
                       | Suavecito
                   .checkbox
-                    input.checkbox__input(type='checkbox', id='malingoetz')
-                    label.catalog__filter-item.checkbox__label(for='malingoetz')
+                    input.checkbox__input(
+                      id='malingoetz'
+                      type='checkbox')
+                    label.catalog__filter-item.checkbox__label(
+                      for='malingoetz')
                       | Malin+Goetz
                   .checkbox
-                    input.checkbox__input(type='checkbox', id='murrays')
-                    label.catalog__filter-item.checkbox__label(for='murrays')
+                    input.checkbox__input(
+                      id='murrays'
+                      type='checkbox')
+                    label.catalog__filter-item.checkbox__label(
+                      for='murrays')
                       | Murray’s
                   .checkbox
-                    input.checkbox__input(type='checkbox', id='americancrew', checked)
-                    label.catalog__filter-item.checkbox__label(for='americancrew')
+                    input.checkbox__input(
+                      id='americancrew'
+                      type='checkbox'
+                      checked)
+                    label.catalog__filter-item.checkbox__label(
+                      for='americancrew')
                       | American Crew
               fieldset.catalog__filter-block
                 legend.catalog__filter-title
                   | Группы товаров:
                 .catalog__filter-list
                   .radiobox
-                    input.radiobox__input(type='radio', id='shaving', name='type')
-                    label.catalog__filter-item.radiobox__label(for='shaving')
+                    input.radiobox__input(
+                      id='shaving'
+                      type='radio'
+                      name='type')
+                    label.catalog__filter-item.radiobox__label(
+                      for='shaving')
                       | Бритвенные принадлежности
                   .radiobox
-                    input.radiobox__input(type='radio', id='care', name='type', checked)
-                    label.catalog__filter-item.radiobox__label(for='care')
+                    input.radiobox__input(
+                      id='care'
+                      type='radio'
+                      name='type'
+                      checked)
+                    label.catalog__filter-item.radiobox__label(
+                      for='care')
                       | Средства для ухода
                   .radiobox
-                    input.radiobox__input(type='radio', id='accessories', name='type')
-                    label.catalog__filter-item.radiobox__label(for='accessories')
+                    input.radiobox__input(
+                      id='accessories'
+                      type='radio'
+                      name='type')
+                    label.catalog__filter-item.radiobox__label(
+                      for='accessories')
                       | Аксессуары
               button.catalog__filter-submit.btn(type='submit')
                 | Показать
@@ -108,7 +140,10 @@ html(lang='ru')
                 .catalog__item
                   .catalog__item-img-wrap
                     a(href='product-card.html')
-                      img(src='img/catalog-1.jpg', width='220', height='165', alt='')
+                      img(
+                        src='img/catalog-1.jpg'
+                        width='220' height='165'
+                        alt='')
                   .catalog__item-inner
                     h2.catalog__item-desc
                       a.catalog__item-desc-link(href='product-card.html')
@@ -124,7 +159,11 @@ html(lang='ru')
                 .catalog__item
                   .catalog__item-img-wrap
                     a(href='#')
-                      img(src='img/catalog-2.jpg', width='220', height='165', alt='')
+                      img(
+                        src='img/catalog-2.jpg'
+                        width='220'
+                        height='165'
+                        alt='')
                   .catalog__item-inner
                     h2.catalog__item-desc
                       a.catalog__item-desc-link(href='#')
@@ -140,7 +179,11 @@ html(lang='ru')
                 .catalog__item
                   .catalog__item-img-wrap
                     a(href='#')
-                      img(src='img/catalog-3.jpg', width='220', height='165', alt='')
+                      img(
+                        src='img/catalog-3.jpg'
+                        width='220'
+                        height='165'
+                        alt='')
                   .catalog__item-inner
                     h2.catalog__item-desc
                       a.catalog__item-desc-link(href='#')
@@ -156,7 +199,11 @@ html(lang='ru')
                 .catalog__item
                   .catalog__item-img-wrap
                     a(href='#')
-                      img(src='img/catalog-4.jpg', width='220', height='165', alt='')
+                      img(
+                        src='img/catalog-4.jpg'
+                        width='220'
+                        height='165'
+                        alt='')
                   .catalog__item-inner
                     h2.catalog__item-desc
                       a.catalog__item-desc-link(href='#')
@@ -172,7 +219,11 @@ html(lang='ru')
                 .catalog__item
                   .catalog__item-img-wrap
                     a(href='#')
-                      img(src='img/catalog-5.jpg', width='220', height='165', alt='')
+                      img(
+                        src='img/catalog-5.jpg'
+                        width='220'
+                        height='165'
+                        alt='')
                   .catalog__item-inner
                     h2.catalog__item-desc
                       a.catalog__item-desc-link(href='#')
@@ -188,7 +239,11 @@ html(lang='ru')
                 .catalog__item
                   .catalog__item-img-wrap
                     a(href='#')
-                      img(src='img/catalog-6.jpg', width='220', height='165', alt='')
+                      img(
+                        src='img/catalog-6.jpg'
+                        width='220'
+                        height='165'
+                        alt='')
                   .catalog__item-inner
                     h2.catalog__item-desc
                       a.catalog__item-desc-link(href='#')
@@ -207,7 +262,7 @@ html(lang='ru')
                     button.catalog__nav-btn.btn(type='button')
                       | 1
                   li.catalog__nav-item
-                    button.catalog__nav-btn.btn(type='button', disabled)
+                    button.catalog__nav-btn.btn(type='button' disabled)
                       | 2
                   li.catalog__nav-item
                     button.catalog__nav-btn.btn(type='button')

@@ -1,18 +1,17 @@
 doctype html
 html(lang='ru')
-  head
-    meta(charset='utf-8')
-    title
-      | Барбершоп Бородинский
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-    link(rel='stylesheet', href='css/style.min.css')
-  body
+  include layouts/head.pug
 
+  body
     header.page-header
       .page-header__wrapper
         nav.main-nav
           a.main-nav__logo(href='index.html')
-            img(src='img/logo--small.png', width='111', height='24', alt='Барбершоп')
+            img(
+              src='img/logo--small.png'
+              width='111'
+              height='24'
+              alt='Барбершоп')
           ul.main-nav__list.main-nav__list--main
             li.main-nav__item
               a.main-nav__link(href='#')
@@ -37,7 +36,6 @@ html(lang='ru')
         include blocks/login.pug
 
         .modal-overlay
-
     main
       section.price
         .price__wrapper
@@ -97,10 +95,17 @@ html(lang='ru')
               .default-content__columns
                 .default-content__column
                   p.default-content__short-text
-                    | Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.
+                    | Наша парикмахерская занимается исключительно мужскими
+                    | стрижками. Стрижка каждого клиента для нас - это
+                    | уникальная и продуманная до мелочей работа. Мы не
+                    | работаем на количество, мы делаем качество.
                 .default-content__column
                   p.default-content__short-text
-                    | Наша мастерская расположена в центре города, поэтому сделаaть стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!
+                    | Наша мастерская расположена в центре города, поэтому
+                    | сделаaть стильную стрижку можно в любое время, даже в
+                    | обеденный перерыв. Здесь вы можете погрузиться в
+                    | удобную для вас атмосферу, чувствовать себя комфортно
+                    | и свободно!
 
     include layouts/footer.pug
     script(src='js/concatenated.min.js')
