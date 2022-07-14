@@ -1,15 +1,20 @@
 .page-header {
+  flex-shrink: 0;
+
   font-size: $font-size--large;
   color: white;
 
   background-color: black;
 }
+
 .page-header__wrapper {
   @include container;
 }
+
 .main-nav {
   display: flex;
 }
+
 .main-nav__logo {
   display: flex;
   justify-content: center;
@@ -19,12 +24,14 @@
   margin-right: 10px;
 
   color: white;
+
   img {
     display: inline-block;
 
     vertical-align: middle;
   }
 }
+
 .main-nav__list {
   display: flex;
   flex-wrap: wrap;
@@ -33,16 +40,20 @@
   padding: 0;
 
   list-style: none;
+
   &--main {
     max-width: 675px;
   }
+
   &--user {
     margin-left: auto;
   }
 }
+
 .main-nav__item {
   &--active {
     position: relative;
+
     &::after {
       content: '';
       position: absolute;
@@ -56,6 +67,7 @@
     }
   }
 }
+
 .main-nav__link {
   display: block;
   padding: 23px 20px;
@@ -74,6 +86,7 @@
   &--user {
     display: flex;
     align-items: center;
+
     &::before {
       content: '';
 
@@ -83,7 +96,7 @@
       height: 16px;
       margin-right: 13px;
 
-      background-image: url(../img/spritesheet.png);
+      background-image: url('../img/spritesheet.png');
       background-repeat: no-repeat;
       background-position: -10px -42px;
       opacity: 0.3;
@@ -97,14 +110,17 @@
     }
   }
 }
+
 .page-header__login {
   display: none;
+
   &--show {
     display: block;
 
     animation-name: bounce;
     animation-duration: 0.6s;
   }
+
   &--error {
     animation-name: shake;
     animation-duration: 0.6s;

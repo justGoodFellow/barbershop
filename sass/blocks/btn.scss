@@ -15,11 +15,13 @@
   background-color: black;
   border: none;
   cursor: pointer;
+
   &:hover,
   &:focus {
     background-color: $color-main;
     outline: none;
   }
+
   &--fluid {
     display: block;
     width: 100%;

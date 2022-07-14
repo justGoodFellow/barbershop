@@ -10,9 +10,11 @@
   background-color: $color-main--light;
   border: 2px solid black;
   border-radius: 0;
+
   &:focus {
     border-color: $color-main;
   }
+
   &::placeholder {
     color: black;
   }

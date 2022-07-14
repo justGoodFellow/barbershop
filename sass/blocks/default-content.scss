@@ -3,39 +3,20 @@
     font-size: $font-size--xx-large;
     line-height: $line-height--xx-large;
   }
+
   h2 {
     font-size: $font-size--x-large;
     line-height: $line-height--x-large;
   }
-  p {
-    a {
-      color: black;
-    }
-  }
 
-  .unordered-list {
-    li {
-      display: flex;
-      align-items: center;
-      margin: 13px 0;
-      &::before {
-        content: '';
-
-        display: block;
-        width: 8px;
-        height: 8px;
-        margin-right: 10px;
-        margin-left: 2px;
-
-        background-color: black;
-        transform: rotate(45deg);
-      }
-    }
+  a {
+    color: black;
   }
 
   table {
     border-collapse: collapse;
   }
+
   td {
     padding: 8px 15px;
 
@@ -48,9 +29,23 @@
   justify-content: space-between;
   margin-bottom: 25px;
 }
+
 .default-content__column {
   width: 460px;
 }
+
+.unordered-list {
+  @include list-reset;
+
+  margin: 30px 0;
+
+  li {
+    @include diamond-marker;
+
+    margin: 13px 0;
+  }
+}
+
 .default-content__short-text {
   padding-right: 80px;
 }

@@ -1,9 +1,11 @@
 .logo {
   margin-top: 60px;
 }
+
 .logo__wrapper {
   @include container;
 }
+
 .logo__img-wrap {
   width: 368px;
   height: 204px;

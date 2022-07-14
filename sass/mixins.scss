@@ -4,3 +4,28 @@
   margin-left: auto;
   padding: 0 10px;
 }
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin diamond-marker {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    margin-left: 2px;
+
+    background-color: black;
+    transform: rotate(45deg);
+  }
+}

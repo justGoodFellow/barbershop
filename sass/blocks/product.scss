@@ -1,22 +1,27 @@
 .product {
   padding-bottom: 20px;
 }
+
 .product__wrapper {
   @include container;
 }
+
 .product__container {
   display: flex;
   justify-content: space-between;
   margin-top: 55px;
 }
+
 .product__code {
   color: $gray;
 }
+
 .product__gallery {
   display: flex;
   flex-wrap: wrap;
   width: 460px;
 }
+
 .product__gallery-item {
   width: 140px;
   margin-right: 20px;
@@ -38,32 +43,47 @@
   &--big {
     width: 460px;
     margin-right: 0;
+
     img {
       height: 499px;
     }
   }
 }
+
 .product__info {
   width: 390px;
   margin-top: 20px;
 }
+
 .product__info-main {
   margin-bottom: 60px;
 }
+
 .product__info-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
 }
+
 .product__purchase-block {
   margin: 35px 0;
+
   .purchase-block__price {
     width: 100px;
   }
 }
+
 .product__set-title {
   margin-bottom: 30px;
 
   font-size: $font-size--x-large;
   line-height: $line-height--x-large;
+}
+
+.product__set-list {
+  @include list-reset;
+}
+
+.product__set-item {
+  @include diamond-marker;
 }
