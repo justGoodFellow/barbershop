@@ -5,7 +5,7 @@ var del = require('del');
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var minify = require('gulp-csso');
 var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
@@ -45,17 +45,9 @@ function templates() {
 function styles() {
   return gulp.src('sass/styles.scss')
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sass.sync())
     .pipe(postcss([
-      autoprefixer({
-        browsers: [
-          'last 1 version',
-          'last 2 Chrome versions',
-          'last 2 Firefox versions',
-          'last 2 Opera versions',
-          'last 2 Edge versions'
-        ]
-      }),
+      autoprefixer(),
       mqpacker({
         sort: true
       })
@@ -88,7 +80,8 @@ function images() {
       imagemin.optipng({
         optimizationLevel: 3
       }),
-      imagemin.jpegtran({
+      imagemin.mozjpeg({
+        quality: 100,
         progressive: true
       }),
       imagemin.svgo()
