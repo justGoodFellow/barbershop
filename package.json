@@ -1,7 +1,7 @@
 {
-  "name": "barbershop-old",
+  "name": "barbershop",
   "description": "Учебный проект - Барбершоп Бородинский",
-  "homepage": "https://github.com/justGoodFellow/barbershop-old",
+  "homepage": "https://github.com/justGoodFellow/barbershop",
   "author": "Sergey Bodnaryuk <s.bodnaryuk@gmail.com>",
   "private": true,
   "engines": {
